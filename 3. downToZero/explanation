@@ -1,0 +1,4 @@
+The program finds the smallest number of steps to reduce a number down to zero. At each step, you can either 
+subtract 1 or replace the number with the larger of its two factors. It uses a queue (BFS approach) to explore 
+all possible paths and keeps track of visited numbers to avoid repetition. The answer is the fewest steps 
+needed to reach zero.
