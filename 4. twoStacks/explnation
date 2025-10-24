@@ -1,0 +1,4 @@
+This program finds the maximum number of elements you can remove from two stacks without the total sum going over a given limit.
+It first takes as many numbers as possible from the first stack, then starts adding numbers from the second stack.
+If the total becomes too large, it removes numbers from the first stack until the sum is small enough again.
+The goal is to find the biggest count of numbers that can be taken while keeping the sum within the limit.
