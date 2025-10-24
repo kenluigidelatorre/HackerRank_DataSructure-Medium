@@ -1,0 +1,4 @@
+This program checks if a linked list has a cycle (meaning the nodes loop back to an earlier node instead of ending). 
+It uses two pointers: one moves one step at a time (slow), and the other moves two steps (fast). If there’s a loop, 
+they will eventually meet inside the cycle. If the fast pointer reaches the end (null), then there’s no cycle. This 
+approach is efficient because it doesn’t need extra memory, just careful movement of pointers.
