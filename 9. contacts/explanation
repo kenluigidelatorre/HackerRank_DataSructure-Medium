@@ -1,0 +1,3 @@
+This program keeps a list of contact names and can check how many names start with certain letters. When the user enters “add,” 
+the name is saved in the list. When the user enters “find,” the program looks through all saved names and counts how many begin 
+with the given letters. It then prints the total number of matches for each find command.
