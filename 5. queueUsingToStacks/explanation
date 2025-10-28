@@ -1,0 +1,4 @@
+This program builds a queue using two stacks. One stack stores new elements added to the queue, while the other stack 
+holds elements ready to be removed or viewed. When the second stack is empty and we need to remove or look at the front 
+element, the program transfers all items from the first stack to the second, reversing their order. This makes sure that 
+the element added first is always the one removed first, just like in a normal queue.
