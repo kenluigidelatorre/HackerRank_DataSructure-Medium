@@ -1,4 +1,0 @@
-This program finds the shortest path a player can take on a grid with open cells (.) and walls (X). From the starting position, the player 
-can move in straight lines up, down, left, or right until hitting a wall or the edge. The program uses a breadth-first search (BFS) to explore 
-all possible moves step by step and records how many moves it takes to reach each cell. The fewest number of moves to reach the goal position 
-is then printed as the result.
