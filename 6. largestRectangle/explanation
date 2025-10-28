@@ -1,0 +1,4 @@
+This program finds the largest rectangular area that can fit inside a histogram. It uses a stack to track the bars’ indices. When a bar is 
+shorter than the one before it, the program calculates the area using the height of the taller bar and determines how wide that rectangle 
+can extend. It keeps updating the maximum area found. Finally, it repeats this for all remaining bars in the stack, ensuring the largest 
+possible rectangle is returned.
