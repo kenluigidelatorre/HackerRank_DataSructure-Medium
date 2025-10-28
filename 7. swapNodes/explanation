@@ -1,0 +1,3 @@
+This program builds a binary tree from the given list of indexes, where each row tells which nodes are the left and right children of a node. 
+For each query k, it swaps all nodes whose depth is a multiple of k. After performing the swaps, it does an in-order traversal (left → root → right) 
+to print the sequence of nodes. The process repeats for every query, showing how the tree changes after each swap.
