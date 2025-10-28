@@ -1,0 +1,77 @@
+using System.CodeDom.Compiler;
+using System.Collections.Generic;
+using System.Collections;
+using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Runtime.Serialization;
+using System.Text.RegularExpressions;
+using System.Text;
+using System;
+
+class Result
+{
+
+    /*
+     * Complete the 'largestRectangle' function below.
+     *
+     * The function is expected to return a LONG_INTEGER.
+     * The function accepts INTEGER_ARRAY h as parameter.
+     */
+
+    public static long largestRectangle(List<int> h)
+    {
+        Stack<int> stack = new Stack<int>();
+        long maxArea = 0;
+        int i = 0;
+
+        while (i < h.Count)
+        {
+            if (stack.Count == 0 || h[stack.Peek()] <= h[i])
+            {
+                stack.Push(i);
+                i++;
+            }
+            else
+            {
+                int top = stack.Pop();
+                long height = h[top];
+                long width = stack.Count == 0 ? i : i - stack.Peek() - 1;
+                maxArea = Math.Max(maxArea, height * width);
+            }
+        }
+
+        while (stack.Count > 0)
+        {
+            int top = stack.Pop();
+            long height = h[top];
+            long width = stack.Count == 0 ? i : i - stack.Peek() - 1;
+            maxArea = Math.Max(maxArea, height * width);
+        }
+
+        return maxArea;
+    }
+
+}
+
+class Solution
+{
+    public static void Main(string[] args)
+    {
+        TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+
+        int n = Convert.ToInt32(Console.ReadLine().Trim());
+
+        List<int> h = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(hTemp => Convert.ToInt32(hTemp)).ToList();
+
+        long result = Result.largestRectangle(h);
+
+        textWriter.WriteLine(result);
+
+        textWriter.Flush();
+        textWriter.Close();
+    }
+}
